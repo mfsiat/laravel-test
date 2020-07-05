@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('landing');
-});
+Route::get('/', 'PostsController@index');
+Route::resource('posts', 'PostsController');
+Route::resource('videos', 'VideosController');
 
-Route::get('/landing', 'PagesController@landing');
+Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('home');

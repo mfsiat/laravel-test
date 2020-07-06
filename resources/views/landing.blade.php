@@ -32,9 +32,12 @@
         <h3>Section 2</h3>
         @foreach ($videos as $video)
           <ul class="list-group">
+            <iframe class="card-img-top" src={{$video->vid_url}}></iframe>
             <li class="list-group-item">
               <a href="/videos/{{ $video->id }}">
-                {{ $video->title }}
+                <h4>{{ $video->title }}</h4>
+                <h5>{{ $video->brief }}</h5>
+                <p>{{ $video->body }}</p>
               </a>
             </li>
           </ul>

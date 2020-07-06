@@ -18,6 +18,7 @@ class CreateVideosTable extends Migration
             $table->string('title');            
             $table->mediumText('brief');            
             $table->mediumText('body');            
+            $table->string('vid_url');            
             $table->timestamps();
         });
     }

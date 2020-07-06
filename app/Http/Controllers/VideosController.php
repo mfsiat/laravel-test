@@ -23,4 +23,27 @@ class VideosController extends Controller
         return view('videos.create');
     }
 
+    public function store()
+    {
+        $this->validate(request(), [
+            'title' => 'required|min:6|max:12',
+            'brief' => 'required',
+            'body' => 'required'
+        ]);
+
+        $data = request()->all();
+
+        $video = new Video(); // creates a new instance of the model and assigned a name property
+        $video->title = $data['title'];
+        $video->brief = $data['brief'];
+        $video->body = $data['body'];
+        $video->vid_url = $data['vid_url'];     
+       
+        $video->save();
+
+        return redirect('/');
+
+    }
+    
+
 }

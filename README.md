@@ -6,5 +6,14 @@
 ![](laravel-test.gif)
 
 ## Usage
-- To run please clone the repo and run the commands. 
+- To run please clone the repo and run the following commands. 
+
+- Commands: 
+```bash
+composer install 
+
+php artisan migrate 
+
+php artisan serve 
+```
 

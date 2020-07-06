@@ -6,6 +6,8 @@
 @endsection
 
 @section('content')
+
+@auth
 <h1 class="text-center my-5">
   Create Post
 </h1>
@@ -47,4 +49,8 @@
     </div>
   </div>
 </div>
+@else
+  @yield('content')
+@endauth
+
 @endsection

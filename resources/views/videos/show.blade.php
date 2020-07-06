@@ -15,7 +15,7 @@
       <div class="col-md-6">
         <div class="card card-default">
           <div class="card-header">
-            <iframe width="480" height="320" src="{{$videos->vid_url}}"></iframe>
+            <iframe width="480" height="320" src="https://www.youtube.com/embed/{{$videos->vid_url}}"></iframe>
           </div>
           <div class="card-body">
             <h5>Brief: {{ $videos->brief }}</h5>

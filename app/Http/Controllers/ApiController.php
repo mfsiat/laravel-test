@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ApiController extends Controller
@@ -13,7 +14,12 @@ class ApiController extends Controller
      */
     public function index()
     {
-        return 'Hello';
+//        return 'Hello';
+//        $user = User::latest()->with(['name'])->paginate(20);
+//        return user;
+        $users = User::all();
+        return response()->json($users);
+
     }
 
     /**

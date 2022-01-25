@@ -20,4 +20,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// this is not the standard procedure to develop an api
 Route::get('/test', [ApiController::class, 'index'])->name('test');

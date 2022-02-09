@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -15,11 +16,23 @@ class ApiController extends Controller
     public function index()
     {
 //        return 'Hello';
-//        $user = User::latest()->with(['name'])->paginate(20);
-//        return user;
+    //    $user = User::latest()->with(['name'])->paginate(20);
+    //    return user;
+    //    $users = User::all();
+    //    return response()->json($users);
+
+    }
+
+    public function getUsers()
+    {
         $users = User::all();
         return response()->json($users);
+    }
 
+    public function getPosts()
+    {
+        $posts = Post::all();
+        return response()->json($posts);
     }
 
     /**
@@ -51,7 +64,11 @@ class ApiController extends Controller
      */
     public function show($id)
     {
-        //
+        // $users = User::all();
+        // return response()->json($users);
+        // return 'Hello';
+        // dd($user);
+
     }
 
     /**

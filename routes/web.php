@@ -21,7 +21,8 @@ Route::get('/', function () {
 });
 
 // this is not the standard procedure to develop an api
-Route::get('/test', [ApiController::class, 'index'])->name('test');
+Route::get('/api/v1/user', [ApiController::class, 'getUsers'])->name('user');
+Route::get('/api/v1/posts', [ApiController::class, 'getPosts'])->name('post');
 
 Auth::routes();
 

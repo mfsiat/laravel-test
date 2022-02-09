@@ -22,3 +22,7 @@ Route::get('/', function () {
 
 // this is not the standard procedure to develop an api
 Route::get('/test', [ApiController::class, 'index'])->name('test');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

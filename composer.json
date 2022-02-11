@@ -11,6 +11,7 @@
         "haruncpi/laravel-user-activity": "^1.0",
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
+        "laravel/telescope": "^4.7",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.4",
         "rezaamini-ir/migrator": "^1.4"

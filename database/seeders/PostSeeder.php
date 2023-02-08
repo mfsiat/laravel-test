@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+// use Database\Seeders\DB;
+// use Illuminate\Support\Facades\DB;
 
 class PostSeeder extends Seeder
 {
